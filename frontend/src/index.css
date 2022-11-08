@@ -1,3 +1,88 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Base */
+
+/* Components */
+@layer components {
+  /* Container */
+  .containers {
+    @apply md:container md:mx-auto px-[15px];
+  }
+  /* NavBar Top */
+  .phone {
+    @apply flex items-center pt-2 pb-1 border-b border-[#ddd] dark:border-[#cfcdc8ce] text-lg sm:border-x sm:border-b-0 sm:border-[#ddd] sm:dark:border-[#cfcdc8ce] sm:pt-5 sm:pb-4 md:text-sm sm:text-xs xl:text-xl;
+  }
+  .email {
+    @apply flex items-center pt-3 pb-1 text-lg border-b border-[#ddd] dark:border-[#cfcdc8ce] sm:border-b-0 sm:text-xs sm:pt-5 sm:pb-4 md:col-span-2 md:text-sm lg:col-span-3 xl:text-xl;
+  }
+  .social {
+    @apply col-span-1 flex items-center sm:justify-end mr-5;
+  }
+  .social_item {
+    @apply sm:pt-[22px] sm:pb-[18px] sm:border-l sm:border-[#ddd]  sm:dark:border-[#cfcdc8ce] px-3;
+  }
+  .social_icon {
+    @apply text-lg text-[#846767] cursor-pointer hover:text-red-600 duration-700 dark:text-[#ddd] dark:hover:text-[#00a2ff] hover:scale-x-75 hover:animate-bounce;
+  }
+  .mode_item {
+    @apply justify-center items-center inline-block p-2 mt-2 text-lg rounded-lg bg-[#cfcdc8ce] dark:bg-[#02afff33] hover:bg-[#979695] duration-300 dark:hover:bg-[#02afffa8] hover:scale-x-75;
+  }
+
+  /* Navbar */
+  .Nav_Logo {
+    @apply col-span-2 md:col-span-1;
+  }
+  .Nav_Menu {
+    @apply relative;
+  }
+  .Nav_Menu_item {
+    @apply text-xl absolute flex justify-center items-center w-[34px] h-auto bg-[#ddd] top-[-8px] right-0 rounded-sm sm:mr-3;
+  }
+  .nav_bar {
+    @apply md:col-span-3 max-md:dark:bg-[#0000005c];
+  }
+  .nav_list {
+    @apply md:flex md:justify-end;
+  }
+  li.nav_item {
+    @apply md:mr-4;
+  }
+  a.nav_link {
+    @apply text-[#00000094] md:ml-4 uppercase md:text-[15px] font-Oswald font-[600] dark:text-[#1b1818ad] lg:ml-6 xl:ml-10;
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  /*Media Screen 767px*/
+  @media only Screen and (max-width: 767px) {
+    /* Navbar */
+    .nav_bar {
+      position: absolute;
+      width: 100%;
+      top: 40px;
+      left: 0px;
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      background: #f5f5f5;
+    }
+    .active {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+    .nav_list {
+      margin: 0px 0px 0px 25px;
+      padding: 30px 0px 50px 0px;
+    }
+    li.nav_item {
+      padding: 10px;
+    }
+    a.nav_link {
+      font-size: 25px;
+    }
+  }
+}
