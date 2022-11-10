@@ -6,13 +6,11 @@ import Index from "./Routers";
 
 function App() {
   return (
-    <main>
-      <Provider store={store}>
-        <BrowserRouter>
-          <Index />
-        </BrowserRouter>
-      </Provider>
-    </main>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Index />
+      </BrowserRouter>
+    </Provider>
   );
 }
 

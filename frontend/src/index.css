@@ -41,7 +41,7 @@
     @apply text-xl absolute flex justify-center items-center w-[34px] h-auto bg-[#ddd] top-[-8px] right-0 rounded-sm sm:mr-3;
   }
   .nav_bar {
-    @apply md:col-span-3 max-md:dark:bg-[#0000005c];
+    @apply md:col-span-3 max-md:dark:bg-[#000000b0] dark:z-20;
   }
   .nav_list {
     @apply md:flex md:justify-end;
@@ -50,7 +50,24 @@
     @apply md:mr-4;
   }
   a.nav_link {
-    @apply text-[#00000094] md:ml-4 uppercase md:text-[15px] font-Oswald font-[600] dark:text-[#1b1818ad] lg:ml-6 xl:ml-10;
+    @apply text-[#000000] dark:text-[#383838e7] md:ml-4 uppercase md:text-[15px] font-Oswald font-[600] max-md:dark:text-[#bdbaba] lg:ml-6 xl:ml-10;
+  }
+
+  /* Hero Section */
+  .Hero_Section {
+    @apply bg-[url('../src/assets/Images/Hero.jpg')] bg-no-repeat max-md:bg-cover max-md:bg-center max-md:py-36 py-44 bg-cover bg-center;
+  }
+  .hero_content {
+    @apply text-[#fff] w-[530px] max-md:w-[450px] max-sm:w-[300px];
+  }
+  .hero_heading {
+    @apply max-sm:text-[25px] max-md:uppercase font-[600] max-md:pb-4 max-md:text-[30px] text-[40px] pb-5 dark:text-[#ddd];
+  }
+  .hero_pra {
+    @apply font-bold max-md:pb-9 pb-8 dark:text-[#ddd];
+  }
+  .hero_btn {
+    @apply bg-[#ff5200] py-[15px] inline-block px-[25px] border-0 rounded-[3px] font-[600] dark:text-[#ddd] dark:bg-[#0006] hover:bg-[#ff5100bd] duration-300 dark:hover:bg-[#00000094];
   }
 }
 
@@ -69,7 +86,7 @@
       visibility: hidden;
       background: #f5f5f5;
     }
-    .active {
+    .actives {
       display: block;
       opacity: 1;
       visibility: visible;

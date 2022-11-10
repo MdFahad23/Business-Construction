@@ -1,13 +1,14 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-import Navbar from "../Layout/Navbar";
-import Footer from "../Layout/Footer";
+import Home from "../Pages/Home";
 
 const Index = () => {
   return (
     <>
-      <Navbar />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   );
 };

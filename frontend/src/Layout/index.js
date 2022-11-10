@@ -1,16 +1,20 @@
 import React, { useEffect } from "react";
 
-const Layout = ({ title = "Home / Construction", className, Childe }) => {
-  useEffect(
-    (title) => {
-      document.title = title;
-    },
-    [title]
-  );
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+
+const Layout = ({ title = "BUILDING / CONSTRUCTION", className, children }) => {
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
   return (
-    <section title={title} className={className}>
-      <div>{Childe}</div>
-    </section>
+    <main>
+      <Navbar />
+      <section>
+        <div className={className}>{children}</div>
+      </section>
+      <Footer />
+    </main>
   );
 };
 

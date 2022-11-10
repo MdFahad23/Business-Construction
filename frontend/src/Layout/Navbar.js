@@ -30,7 +30,7 @@ const Navbar = () => {
                 {Menu ? <FaTimes /> : <GiHamburgerMenu />}
               </span>
             </div>
-            <div className={Menu ? "nav_bar active" : "nav_bar"}>
+            <div className={Menu ? "nav_bar actives" : "nav_bar"}>
               <ul className="nav_list">
                 <li className="nav_item">
                   <NavLink to="/" className="nav_link">
